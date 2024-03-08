@@ -16,13 +16,13 @@
     * [2.5. svn更新代码](/笔记/Linux服务/linux中使用svn更新代码.md "BanLi笔记 - svn更新代码")
     * [2.6. 搭建mysql服务](/笔记/Linux服务/linux中搭建mysql服务.md "BanLi笔记 - 搭建mysql服务")
 
-  * [3. 媒资服务](/笔记/媒资服务 "BanLi笔记 - 媒资服务")
+  * [3. 媒资服务](/笔记/媒资服务/README.md "BanLi笔记 - 媒资服务")
     * [3.1. 弘安-民语言备份](/笔记/媒资服务/弘安-民语言备份.md "BanLi笔记 - 弘安-民语言备份")
     * [3.2. 媒资采集服务](/笔记/媒资服务/媒资采集服务.md "BanLi笔记 - 媒资采集服务")
     * [3.3. 媒资分发](/笔记/媒资服务/媒资分发.md "BanLi笔记 - 媒资分发")
     * [3.4. 陕西栏目更新与媒资挂载](/笔记/媒资服务/陕西栏目更新与媒资挂载.md "BanLi笔记 - 陕西栏目更新与媒资挂载")
 
-  * [4. Python服务](/笔记/Python服务 "BanLi笔记 - Python服务")
+  * [4. Python服务](/笔记/Python服务/README.md "BanLi笔记 - Python服务")
     * [4.1. 日志模块](/笔记/Python服务/日志模块.md "BanLi笔记 - 弘安-民语言备份")
     * [4.2. 删除.pyc文件](/笔记/Python服务/删除.pyc文件.md "BanLi笔记 - 删除.pyc文件")
     * [4.3. sh脚本示例](/笔记/Python服务/sh脚本示例.md "BanLi笔记 - sh脚本示例")
