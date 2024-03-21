@@ -29,7 +29,6 @@ class DbBaseQueue(object):
         # 创建队列
         self._queue = queue.Queue(self.max)
         self._init_db(**connect_info)
-
         print("程序初始化完成", self._queue)
 
     def _conn(self):
@@ -71,15 +70,13 @@ class DbBaseQueue(object):
                 self.commit(conn)
         finally:
             queryres = 0
-
             if query and return_flag:
                 # 返回游标
                 queryres = cursor
-
             cursor.close() if cursor else None
             if query:
                 return queryres
-
+                
             return return_flag
 
     def commit(self, conn):
@@ -155,7 +152,6 @@ if __name__ == '__main__':
 ```py
 
 #  -*- coding: utf-8 -*-
-
 import pymysql
 
 
@@ -169,7 +165,6 @@ class DbOperate:
             self.dbHandler.close()
 
     def operation(self, strSql):
-
         cursor = None
         nAffectLine = 0
         dataTuple = ()
@@ -180,18 +175,14 @@ class DbOperate:
             cursor = self.dbHandler.cursor()
             nAffectLine = cursor.execute(strSql)
             self.dbHandler.commit()
-
             if nAffectLine > 0:
                 dataTuple = cursor.fetchall()
-
         except Exception as err:
             self.dbHandler.rollback()
             return -1, err, None
-
         finally:
             if cursor:
                 cursor.close()
-
         return nAffectLine, "", dataTuple
 
     def close(self):
@@ -379,19 +370,14 @@ mysqlDB = 'homed_dtvs'
 def mysql(sql):
     db = pymysql.connect(host = mysqlSrv_ip, port = 3306, user = mysqlUser, password = mysqlPassword, database = mysqlDB, charset = 'utf8')
     cursor = db.cursor()
-
     # 字典化
     cursor = db.cursor(cursor=pymysql.cursors.DictCursor)
-
     # 执行sql语句
     cursor.execute(sql)
-
     # 获取SQL语句执行返回数据
     data = cursor.fetchall()
-
     # 将sql语句执行结果保存至数据库
     db.commit()
-
     # 关闭数据库连接
     db.close()
     return data
