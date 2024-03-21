@@ -1,7 +1,7 @@
-## Git 连接问题：fatal: unable to access ‘https://github.com/...../‘: Failed to connect to git
+## 问题一
 
 现象:
-* 提交git时出现报错，连接不上git服务
+* Git 连接问题：fatal: unable to access ‘https://github.com/...../‘: Failed to connect to git
 
 原因：
 * 1. DNS 解析出现问题
@@ -19,30 +19,23 @@
 
 
 
-## npm WARN config global `--global`, `--local` are deprecated. Use `--location=global` instead
-
+## 问题二
 现象：
-* 在使用npm -v命令时提示如下错误npm WARN config global –global, –localare deprecated. Use–location=global instead
+* npm WARN config global `--global`, `--local` are deprecated. Use `--location=global` instead
 
 原因：
 * npm 的全局配置--global, --local已弃用。需使用--location=global替代 。
 
 解决：
-    ```sh
-    1、找到node的安装路径
-    (./Image/nodejs_3.jpg)
-    2、修改npm，npm.cmd文件, 成 prefix --location=global
-    (./Image/nodejs_3.jpg)
-    (./Image/nodejs_4.jpg)
-    (./Image/nodejs_5.jpg)
-    ```
+ *  1、找到node的安装路径
+ *  2、修改npm，npm.cmd文件, 成 prefix --location=global
 
 
 
-## git init 出现 Using ‘master‘ as the name for the initial branch. This default branch name报错
+## 问题三
 
 现象：
-* 目录下初始化git时报错
+* git init 出现 Using ‘master‘ as the name for the initial branch. This default branch name报错
 
 ```sh
 
@@ -73,28 +66,30 @@ Initialized empty Git repository in /tmp/new/.git/
     ```
 
 
-## npm ERR! code CERT_HAS_EXPIRED npm ERR! errno CERT_HAS_EXPIRED npm ERR! request to
+## 问题四
 
 现象：
-* cmd连接git时报错
+* npm ERR! code CERT_HAS_EXPIRED npm ERR! errno CERT_HAS_EXPIRED npm ERR! request to
 
 原因：
 * 证书过期
 
 解决：
+ * 清除npm缓存
+
     ```sh
-    清除npm缓存
+    # 清除npm缓存
     npm cache clean --force
-    取消ssl验证：
+    # 取消ssl验证：
     npm config set strict-ssl false
-    之后再npm install 
+    # 之后再npm install 
     ```
 
 
-## fatal: Authentication failed for ‘https://github.com/*/*.git/‘
+## 问题五
 
 现象:
-* 本地cmd提供文件到git时，登录失败
+* fatal: Authentication failed for ‘https://github.com/*/*.git/‘
 
 原因：
 * github 的认证策略发生了改变，在 2021年8月13日 的时候，用户名加密码的认证方式被去掉了，换成了 个人令牌（Personal Access Token）的校验方式。
