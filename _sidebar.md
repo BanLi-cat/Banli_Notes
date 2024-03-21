@@ -16,6 +16,7 @@
     * [2.5. svn更新代码](/笔记/Linux服务/linux中使用svn更新代码.md "BanLi笔记 - svn更新代码")
     * [2.6. 搭建mysql服务](/笔记/Linux服务/linux中搭建mysql服务.md "BanLi笔记 - 搭建mysql服务")
     * [2.7. 搭建kafka服务](/笔记/Linux服务/linux中安装kafka服务.md "BanLi笔记 - 搭建kafka服务")
+    * [2.8. 搭建Supervisor服务](/笔记/Linux服务/linux中搭建Supervisor服务.md "BanLi笔记 - 搭建Supervisor服务")
 
   * [3. 媒资服务](/笔记/媒资服务/README.md "BanLi笔记 - 媒资服务")
     * [3.1. 弘安-民语言备份](/笔记/媒资服务/弘安-民语言备份.md "BanLi笔记 - 弘安-民语言备份")
