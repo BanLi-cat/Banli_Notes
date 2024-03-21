@@ -32,9 +32,5 @@
     * [4.6. 发送邮件模块](/笔记/Python服务/发送邮件模块.md "BanLi笔记 - 发送邮件模块")
 
   * [5. NodeJs](/笔记/NodeJs/README.md "BanLi笔记 - NodeJs")
-    * [4.1. 日志模块](/笔记/Python服务/日志模块.md "BanLi笔记 - 弘安-民语言备份")
-    * [4.2. 删除.pyc文件](/笔记/Python服务/删除.pyc文件.md "BanLi笔记 - 删除.pyc文件")
-    * [4.3. sh脚本示例](/笔记/Python服务/sh脚本示例.md "BanLi笔记 - sh脚本示例")
-    * [4.4. ftp相关](/笔记/Python服务/ftp相关操作.md "BanLi笔记 - ftp相关")
-    * [4.5. mysql数据库执行模板](/笔记/Python服务/mysql数据库执行模板.md "BanLi笔记 - mysql数据库执行模板")
-    * [4.6. 发送邮件模块](/笔记/Python服务/发送邮件模块.md "BanLi笔记 - 发送邮件模块")
+    * [5.1. 在线笔记搭建](/笔记/NodeJs/本地搭建Docsify服务.md "BanLi笔记 - 在线笔记搭建")
+    * [5.2. 相关报错](/笔记/NodeJs/nodejs相关报错.md "BanLi笔记 - 相关报错")
