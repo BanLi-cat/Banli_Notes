@@ -115,4 +115,4 @@ ps -aux | grep zookeper.properties
 
 ### kafka概念介绍
 
-![概念图](kafka.png)
+![概念图](./Image/kafka.png)
