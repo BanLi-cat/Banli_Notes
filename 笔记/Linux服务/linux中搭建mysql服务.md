@@ -45,12 +45,11 @@ chown mysql:mysql -R /data/mysql
 
 ## 配置my.cnf
 
-```sh
 
 vim /etc/my.cnf
+把my.cnf的内容删除了，将下面的内容放到里面
 
-# 把my.cnf的内容删除了，将下面的内容放到里面
-
+```conf
 [mysqld]
 bind-address=0.0.0.0
 port=3306
@@ -68,7 +67,6 @@ character_set_server=utf8mb4
 symbolic-links=0
 explicit_defaults_for_timestamp=true
 lower_case_table_names=1
-
 
 # lower_case_table_names=1 是指忽略大小写，max_connections最大连接线程数
 ```
