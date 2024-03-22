@@ -10,13 +10,11 @@ Supervisor是用Python开发的一套通用的进程管理程序，能将一个�
 
 ```sh
 
-# 安装yum源
-yum install epel-release 
+# 1.安装
 yum install -y supervisor
 
-# 启动 supervisor
-/usr/bin/python2 /usr/bin/supervisord -c /etc/supervisord.conf  # 配置文件可以自行设置
-# 缺少这一步可能会报error:class 'socket.error' [Errno 2] No such file or directory: file: /usr/lib64/python2.7/socke
+# 2.配置
+echo_supervisord_conf > /data/localData/z_home/supervisor/conf/supervisord.conf   # 配置文件位置可自行定义
 
 ```
 
@@ -24,16 +22,18 @@ yum install -y supervisor
 
 ```sh
 
-[root@ai245 conf]# ll
-总用量 28
--rw-r--r-- 1 root root  359 11月  7 11:22 code_v_2_10_guangxin.conf         # 子进程配置文件
--rw-r--r-- 1 root root  354 11月  7 11:13 collection_compensation.conf      # 子进程配置文件
--rw-r--r-- 1 root root  329 11月  7 11:17 media_backup.conf                 # 子进程配置文件
--rw-r--r-- 1 root root 9349 11月  7 10:27 supervisord.conf                  # supervisor配置文件
--rw-r--r-- 1 root root  318 11月  7 11:15 videoUpload.conf                  # 子进程配置文件
+# 目录树
+/data/localData/z_home/supervisor
 
-[root@ai245 conf]# pwd
-/data/localData/z_home/supervisor/conf
+├── bin
+├── conf
+│   ├── code_v_2_10_guangxin.conf               # 子进程配置文件
+│   ├── collection_compensation.conf            # 子进程配置文件
+│   ├── media_backup.conf                       # 子进程配置文件
+│   ├── supervisord.conf                        # supervisor配置文件
+│   └── videoUpload.conf                        # 子进程配置文件
+└── log
+    └── collection_compensation_stdout.log      # 日志文件
 
 ```
 
@@ -219,8 +219,13 @@ stdout_logfile = /data/localData/z_home/supervisor/log/videoUpload_stdout.log   
 
 ```sh
 
-# 启动指令
-supervisord -c /usr/supervisor/supervisord.conf
+# 启动supervisord服务
+systemctl start supervisord
+/usr/bin/supervisord -c /etc/supervisord.conf
+
+# 查看supervisord服务状态
+systemctl status supervisord
+/usr/bin/supervisorctl -c /etc/supervisord.conf status
 
 # 查看监听
 netstat -tunlp | grep 9001
@@ -229,3 +234,22 @@ netstat -tunlp | grep 9001
 http://localhost:9001/ 
 
 ```
+
+
+## 问题
+
+现象:
+* 启动服务时出现 Error: Another program is already listening on a port that one of our HTTP servers is configured to use. Shut this program down first before starting supervisord
+
+解决:
+* 解除软连接
+ 
+  ```sh
+  # 找到这个文件的软连接
+  find / -name supervisor.sock
+
+  # 然后，解除软连接
+  unlink /run/supervisor.sock
+
+  # 再重新启动就可以了
+  ```
