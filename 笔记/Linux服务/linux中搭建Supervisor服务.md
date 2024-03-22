@@ -196,7 +196,7 @@ files = /data/localData/z_home/supervisor/conf/*.conf       ; 可以指定一个
 ```
 
 
-### supervisord.conf
+### videoUpload.conf
 
 ```conf
 
