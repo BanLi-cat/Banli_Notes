@@ -45,9 +45,10 @@ chown mysql:mysql -R /data/mysql
 
 ## 配置my.cnf
 
-
+```sh
 vim /etc/my.cnf
-把my.cnf的内容删除了，将下面的内容放到里面
+# 把my.cnf的内容删除了，将下面的内容放到里面
+```
 
 ```conf
 [mysqld]
