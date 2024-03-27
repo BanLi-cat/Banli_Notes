@@ -31,6 +31,7 @@
     * [4.4. ftp相关](/笔记/Python服务/ftp相关操作.md "BanLi笔记 - ftp相关")
     * [4.5. mysql数据库执行模板](/笔记/Python服务/mysql数据库执行模板.md "BanLi笔记 - mysql数据库执行模板")
     * [4.6. 发送邮件模块](/笔记/Python服务/发送邮件模块.md "BanLi笔记 - 发送邮件模块")
+    * [4.7. 去除第三方模块日志打印](/笔记/Python服务/去除第三方模块日志打印.md "BanLi笔记 - 去除第三方模块日志打印")
 
   * [5. 本地服务](/笔记/本地服务/README.md "BanLi笔记 - 本地服务")
     * [5.1. Docsify在线笔记搭建](/笔记/本地服务/本地搭建Docsify服务.md "BanLi笔记 - 在线笔记搭建")
