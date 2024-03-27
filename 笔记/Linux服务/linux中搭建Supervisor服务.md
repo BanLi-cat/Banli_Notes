@@ -233,6 +233,9 @@ netstat -tunlp | grep 9001
 #  查看 supervisor 的web界面
 http://localhost:9001/ 
 
+# 重启某个子活动
+kill -9 子活动进程号 
+
 ```
 
 
