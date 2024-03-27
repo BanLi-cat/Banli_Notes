@@ -34,6 +34,5 @@
 
   * [5. 本地服务](/笔记/本地服务/README.md "BanLi笔记 - 本地服务")
     * [5.1. Docsify在线笔记搭建](/笔记/本地服务/本地搭建Docsify服务.md "BanLi笔记 - 在线笔记搭建")
-    * [5.2. nodejs相关报错](/笔记/本地服务/nodejs相关报错.md "BanLi笔记 - nodejs相关报错")
-    * [5.3. windows搭建mysql服务](/笔记/本地服务/本地搭建mysql服务.md "BanLi笔记 - windows搭建mysql服务")
-    * [5.4. windows搭建jdk服务](/笔记/本地服务/本地搭建jdk服务.md "BanLi笔记 - windows搭建jdk服务")
+    * [5.2. windows搭建mysql服务](/笔记/本地服务/本地搭建mysql服务.md "BanLi笔记 - windows搭建mysql服务")
+    * [5.3. windows搭建jdk服务](/笔记/本地服务/本地搭建jdk服务.md "BanLi笔记 - windows搭建jdk服务")
